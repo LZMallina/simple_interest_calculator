@@ -15,6 +15,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    <!---Chart.js-->
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js" integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <body>
     <article class="container-fluid">
         <section class="container mt-5">
@@ -26,7 +29,7 @@
                         <label for ="amount">Amount $</label>
                         <input type ="number" id="amount" name="amount"><br><br>
                         <label for="interest">Interest Rate</label>
-                        <input type="range" id="interest" name="interest" value ="0" min="0" max="10" oninput ="this.nextElementSibling.value = this.value">
+                        <input type="range" id="interest" name="interest" value ="0" min="0" max="10" step ="0.125" oninput ="this.nextElementSibling.value = this.value">
                         <output>0</output>
                         <br><br>
                         <label for="time">No. of Years</label>
@@ -41,25 +44,23 @@
                     <h5><strong>Ending Balance:</strong> $ <span id="end_balance">0</span></h5>
                     <h5><strong>Interest Earned:</strong> $ <spanc class ="interest_earned">0</spanc></p>
                     <h5>Calculation steps:</h5>
-                    <p>Interest Earned = <span class ="input_amount"></span> X <span id="input_interest">interest rate</span>% X <span id="input_year">year</span> </p>
-                    <p>Ending Balance = <span class ="input_amount">amount</span> + <span class ="interest_earned">interest earned</span></p>
+                    <p>Interest Earned = $<span class ="input_amount">0</span> x <span id="input_interest">0</span>% x <span id="input_year">0</span> year</p>
+                    <p>Ending Balance = $<span class ="input_amount">0</span> + $<span class ="interest_earned">0</span></p>
                 </div>
                 <div class="col-lg">
                     <h3>Breakdown</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                    <p id="pie-chart"></p>
+                 
                 </div>
             </section>
             <section class = "row">
                 <div class="col-lg">
                     <h3>Balance Accumulation graph</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                    <p id="graph"></p>
                 </div>
                 <div class="col-lg">
                     <h3>Schedule</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                    <p id="schedule"></p>
                 </div>
             </section>
         </section>
