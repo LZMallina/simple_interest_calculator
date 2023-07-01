@@ -29,6 +29,10 @@ input{
 #time{
     width:100px;
 }
+#time_choice{
+    padding:2.5px;
+    border: 2px solid black;
+}
 button{
     width:100px;
     background:lightgreen;
@@ -38,3 +42,4 @@ button:hover{
     color:green;
     cursor: pointer;
 }
+
