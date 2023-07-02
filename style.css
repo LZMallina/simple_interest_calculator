@@ -25,6 +25,10 @@ footer{
 }
 input{
     padding-left:5px;
+    text-align: center;
+}
+#interest{
+    width:100px;
 }
 #time{
     width:100px;
@@ -41,5 +45,14 @@ button:hover{
     background:white;
     color:green;
     cursor: pointer;
+}
+table{
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+th{
+    background:lavender;
 }
 
